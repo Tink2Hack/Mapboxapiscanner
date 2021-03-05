@@ -1,5 +1,8 @@
 import requests
 import sys
+import warnings
+
+warnings.filterwarnings("ignore")
 
 if len(sys.argv) <= 1:
 	print("Usage: python MAPBOX_API_SCANNER.py <api-token>")

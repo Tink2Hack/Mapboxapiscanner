@@ -2,6 +2,8 @@
 
 Used for determining whether a leaked/found Mapbox API Key is vulnerable to unauthorized access by other applications or not.
 
+Updated for Python 3, requires [requests](https://requests.readthedocs.io/en/master/) (`pip install requests`).
+
 # Usage
 
 - Clone this Repository

@@ -1,8 +1,15 @@
 import requests
-import warnings 
+import warnings
+import sys
 
 warnings.filterwarnings("ignore")
-apikey = raw_input("Please enter the Mapbox API key you wanted to test: ")
+
+if len(sys.argv) <= 1:
+	print("Usage: python MAPBOX_API_SCANNER.py <api-token>")
+	quit()
+
+apikey = sys.argv[1]
+
 url = "https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/1/0/0.mvt?access_token="+apikey 
 response = requests.get(url, verify=False)
 if response.text.find("error_message") < 0:
